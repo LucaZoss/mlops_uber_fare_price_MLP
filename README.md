@@ -28,3 +28,10 @@ To run the project locally, ensure you have Python 3.11 installed. Follow the st
    ```bash
    git clone https://github.com/LucaZoss/mlops_uber_fare_price_MLP.git
    cd mlops_uber_fare_price_MLP
+
+
+# SECTIONS TO ADD
+
+-> Deeplearning Model
+-> Docker File
+-> FastAPI url for testing
