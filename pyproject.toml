@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "uber-project"
+version = "0.1.0"
+description = ""
+authors = ["LucaZoss <lucazosso@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+tensorflow = "^2.17.0"
+numpy = "^1.23.5"
+fastapi = "^0.112.2"
+uvicorn = "^0.30.6"
+
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+matplotlib = "^3.9.2"
+scikit-learn = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
