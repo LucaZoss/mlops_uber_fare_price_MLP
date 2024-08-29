@@ -34,4 +34,4 @@ To run the project locally, ensure you have Python 3.11 installed. Follow the st
 
 -> Deeplearning Model
 -> Docker File
--> FastAPI url for testing
+-> FastAPI url for testing : uvicorn main:app --reload

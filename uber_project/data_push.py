@@ -20,13 +20,13 @@ df_source = pd.read_csv(original_csv_path)
 df = df_source[['pickup_datetime', 'pickup_longitude', 'pickup_latitude',
                 'dropoff_longitude', 'dropoff_latitude', 'passenger_count']]
 
-# csv_path to store results
-data_dump_path = os.path.join(UP_DIR, 'ds/data_preds_5s.txt')
+# Data Dump Path
+data_dump_path = os.path.join(UP_DIR, 'ds/data_preds_5s.json')
 
 # Updated sampling function
 
 
-def sample_from_dataframe(df, n_samples=1, random_state=None):
+def sample_from_dataframe(df, n_samples=1, random_state=None) -> str:
     rng = np.random.default_rng(seed=random_state)
     sampled_data = {
         'pickup_datetime': rng.choice(df['pickup_datetime'].astype(str), size=n_samples, replace=True).tolist(),
@@ -43,7 +43,7 @@ def sample_from_dataframe(df, n_samples=1, random_state=None):
 # Function to send data to the FastAPI endpoint
 
 
-def send_data_to_api(sampled_json):
+def send_data_to_api(sampled_json) -> requests.Response:
     endpoint = 'http://localhost:8000/predict'
     try:
         # Convert JSON string back to Python object before sending
@@ -56,10 +56,10 @@ def send_data_to_api(sampled_json):
 
     return response
 
-# Main loop for generating and sending data
-
 
 def main():
+    all_data = []  # Initialize an empty list to store all JSON objects
+
     while True:
         new_data = sample_from_dataframe(df, n_samples=1)
         print(f"[{datetime.now()}] Generated new data:\n{new_data}")
@@ -67,9 +67,26 @@ def main():
         # Send the generated data to the API
         results = send_data_to_api(new_data)
 
-        # Store the generated data and the prediction results in a CSV file
-        with open(data_dump_path, 'a') as f:
-            f.write(f"{new_data},{results.json()}\n")
+        if results is not None:
+            # Parse input data and add predicted fare to it
+            input_data = json.loads(new_data)
+
+            # Extract the fare prediction value from the nested dictionary
+            try:
+                # Access the nested fare value directly
+                predicted_fare = results.json(
+                )["predicted_uber_fare_price"][0][0]
+                input_data['predicted_uber_fare_price'] = predicted_fare
+            except (KeyError, IndexError, TypeError) as e:
+                print(f"[{datetime.now()}] Error processing prediction result: {e}")
+                continue
+
+            # Append the JSON object to the list
+            all_data.append(input_data)
+
+            # Save all collected data to a JSON file as a proper JSON array
+            with open(data_dump_path, 'w') as f:
+                json.dump(all_data, f, indent=4)
 
         # Wait for 5 secs before generating and sending new data
         time.sleep(5)

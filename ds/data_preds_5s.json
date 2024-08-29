@@ -1,0 +1,191 @@
+[
+    {
+        "pickup_datetime": [
+            "2015-03-26 08:49:56 UTC"
+        ],
+        "pickup_longitude": [
+            -74.002921
+        ],
+        "pickup_latitude": [
+            40.774162
+        ],
+        "dropoff_longitude": [
+            -74.003454
+        ],
+        "dropoff_latitude": [
+            40.727583
+        ],
+        "passenger_count": [
+            6
+        ],
+        "predicted_uber_fare_price": 13.645774841308594
+    },
+    {
+        "pickup_datetime": [
+            "2014-11-06 20:50:22 UTC"
+        ],
+        "pickup_longitude": [
+            -73.96316
+        ],
+        "pickup_latitude": [
+            40.759015000000005
+        ],
+        "dropoff_longitude": [
+            -73.967761
+        ],
+        "dropoff_latitude": [
+            40.717585
+        ],
+        "passenger_count": [
+            1
+        ],
+        "predicted_uber_fare_price": 15.69601058959961
+    },
+    {
+        "pickup_datetime": [
+            "2013-10-24 21:40:16 UTC"
+        ],
+        "pickup_longitude": [
+            -73.95386500000001
+        ],
+        "pickup_latitude": [
+            40.744587
+        ],
+        "dropoff_longitude": [
+            -74.01414399999999
+        ],
+        "dropoff_latitude": [
+            40.75402450561523
+        ],
+        "passenger_count": [
+            1
+        ],
+        "predicted_uber_fare_price": 17.000600814819336
+    },
+    {
+        "pickup_datetime": [
+            "2009-03-20 09:46:20 UTC"
+        ],
+        "pickup_longitude": [
+            -73.991226
+        ],
+        "pickup_latitude": [
+            40.74158
+        ],
+        "dropoff_longitude": [
+            -73.981911
+        ],
+        "dropoff_latitude": [
+            40.781316
+        ],
+        "passenger_count": [
+            1
+        ],
+        "predicted_uber_fare_price": 12.844482421875
+    },
+    {
+        "pickup_datetime": [
+            "2012-02-21 20:18:47 UTC"
+        ],
+        "pickup_longitude": [
+            -73.991575
+        ],
+        "pickup_latitude": [
+            40.788128
+        ],
+        "dropoff_longitude": [
+            -73.988247
+        ],
+        "dropoff_latitude": [
+            40.745713
+        ],
+        "passenger_count": [
+            1
+        ],
+        "predicted_uber_fare_price": 12.386466979980469
+    },
+    {
+        "pickup_datetime": [
+            "2010-06-09 17:10:14 UTC"
+        ],
+        "pickup_longitude": [
+            -73.97596
+        ],
+        "pickup_latitude": [
+            0.0
+        ],
+        "dropoff_longitude": [
+            -73.973108
+        ],
+        "dropoff_latitude": [
+            40.75773239135742
+        ],
+        "passenger_count": [
+            1
+        ],
+        "predicted_uber_fare_price": 9.178243637084961
+    },
+    {
+        "pickup_datetime": [
+            "2011-05-15 09:15:09 UTC"
+        ],
+        "pickup_longitude": [
+            -73.95362091064453
+        ],
+        "pickup_latitude": [
+            40.764952
+        ],
+        "dropoff_longitude": [
+            -73.906418
+        ],
+        "dropoff_latitude": [
+            40.745537
+        ],
+        "passenger_count": [
+            6
+        ],
+        "predicted_uber_fare_price": 8.411745071411133
+    },
+    {
+        "pickup_datetime": [
+            "2014-09-18 07:05:47 UTC"
+        ],
+        "pickup_longitude": [
+            -74.00837299999999
+        ],
+        "pickup_latitude": [
+            40.775805
+        ],
+        "dropoff_longitude": [
+            -73.988354
+        ],
+        "dropoff_latitude": [
+            40.774812
+        ],
+        "passenger_count": [
+            2
+        ],
+        "predicted_uber_fare_price": 7.052118301391602
+    },
+    {
+        "pickup_datetime": [
+            "2013-01-16 08:45:05 UTC"
+        ],
+        "pickup_longitude": [
+            -73.986315
+        ],
+        "pickup_latitude": [
+            40.757355
+        ],
+        "dropoff_longitude": [
+            -73.97206115722656
+        ],
+        "dropoff_latitude": [
+            40.747877
+        ],
+        "passenger_count": [
+            1
+        ],
+        "predicted_uber_fare_price": 7.587309837341309
+    }
+]
