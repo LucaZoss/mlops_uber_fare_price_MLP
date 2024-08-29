@@ -1,0 +1,20 @@
+name: CI/CD Pipeline
+
+# # setup workflow trigger --> pipeline runs whenever I push code to main
+# on:
+#   push:
+#     branches:
+#       - main
+
+# # Define the jobs
+# jobs:
+#   lint-and-test:
+#     runs-on: ubuntu-latest
+#   steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+# - name: Set up Python
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: '3.11'
